@@ -1,0 +1,7 @@
+@mixin clear-grid-area-nth-child($num) {
+  @for $i from 1 through $num {
+    .card:nth-child(#{$i}) {
+      grid-area: unset !important;
+    }
+  }
+}

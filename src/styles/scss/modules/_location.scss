@@ -1,0 +1,145 @@
+@use "../variables.scss" as *;
+
+#location {
+  background: $bg;
+  padding: 60px;
+  text-align: center;
+
+  @media (max-width: $lscreen) {
+    padding: 40px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 60px 20px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0px 10px 60px;
+  }
+
+  .location__title {
+    color: $w;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+
+    @media (max-width: $lscreen) {
+      font-size: 32px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 28px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 26px;
+    }
+  }
+
+  .location__map {
+    margin-bottom: 40px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: unset;
+      img {
+        display: none;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .location__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 40px;
+
+    @media (max-width: $notebooks) {
+      // justify-content: center;
+      column-gap: 20px;
+    }
+
+    .city {
+      text-align: left;
+      margin-bottom: 40px;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 24px;
+      }
+
+      &__name {
+        color: $yellow;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        @media (max-width: $lscreen) {
+          font-size: 20px;
+        }
+
+        @media (max-width: $mobile) {
+          margin-bottom: 10px;
+          font-size: 15px;
+        }
+      }
+
+      &__locations {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &.hh {
+          max-width: 570px;
+        }
+
+        &.msk {
+          max-width: 200px;
+        }
+
+        @media (max-width: $notebooks) {
+          justify-content: flex-start;
+        }
+
+        .city__location {
+          background: none;
+          border: 1px solid $yellow;
+          color: $w;
+          padding: 10px 20px;
+          font-size: 16px;
+          margin: 5px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          @media (max-width: $lscreen) {
+            font-size: 14px;
+          }
+
+          @media (max-width: $mobile) {
+            font-size: 14px;
+            padding: 8px 15px;
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

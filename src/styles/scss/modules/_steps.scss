@@ -1,0 +1,120 @@
+@use "../variables.scss" as *;
+
+#steps {
+  background: $w;
+  padding: 100px 60px;
+
+  @media (max-width: $lscreen) {
+    padding: 100px 40px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 60px 20px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 60px 10px;
+  }
+
+  .steps__content {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    @media (max-width: $sxga) {
+      flex-direction: column;
+    }
+
+    .union {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .steps__title {
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: $dark;
+
+      span {
+        color: $pink;
+      }
+
+      @media (max-width: $lscreen) {
+        font-size: 32px;
+        text-align: center;
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 28px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 26px;
+        text-align: left;
+      }
+    }
+
+    .steps__list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px;
+      width: 100%;
+      max-width: 600px;
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+
+        .step__icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+
+          @media (max-width: $mobile) {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          color: $bg;
+          max-width: 470px;
+          margin: 0;
+
+          @media (max-width: $mobile) {
+            max-width: 270px;
+          }
+        }
+      }
+    }
+
+    .steps__images {
+      display: flex;
+      gap: 20px;
+
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      img {
+        object-fit: cover;
+        max-width: 320px;
+        // border: 2px solid $dark;
+
+        @media (max-width: $tablet) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

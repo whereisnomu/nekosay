@@ -1,0 +1,103 @@
+doctype html
+html(lang="ru")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width" )
+      link(rel="stylesheet", href="./css/style.css")
+      //- link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer")  
+
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js' integrity='sha512-F5Ul1uuyFlGnIT1dk2c4kB4DBdi5wnBJjVhL7gQlGh46Xn0VhvD8kgxLtjdZ5YN83gybk/aASUAlpdoWUjRR3g==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+      //  Yandex.Metrika counter 
+      script(type='text/javascript').
+         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(97648630, "init", {
+                  clickmap:true,
+                  trackLinks:true,
+                  accurateTrackBounce:true,
+                  webvisor:true
+            });
+      noscript <div><img src="https://mc.yandex.ru/watch/97648630" style="position:absolute; left:-9999px;" alt=""></div>
+      //  /Yandex.Metrika counter 
+
+      title Франшиза «Межрегиональный центр косметологии и парикмахерского искусства»
+      link(rel="shortcut icon", href="./img/favicon.svg", type="image/x-icon")
+   body 
+      include ../sections/index.pug
+
+
+      div(class='modal' id="modal")
+         .modal-content
+            span.close#closeModalBtn
+               svg.closesvg(width='26', height='26', viewBox='0 0 26 26', xmlns='http://www.w3.org/2000/svg')
+                  path(d='M19.5 6.5L6.5 19.5', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                  path(d='M6.5 6.5L19.5 19.5', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+
+            .form 
+               form(action="./php/mail.php" method="POST")
+                  h3 Мы рады ответить на все интересующие вас вопросы
+                  h4 Позвоните и получите личную консультацию по запуску франшизы
+
+                  .inputs
+                     input(type="text" placeholder="Ваше имя" name="name" required)
+                     input(type="tel" placeholder="Телефон" id="phone" name="phone" required)
+                     input(type="email" placeholder="Электронная почта" name="email" required)
+                     input(type="text" placeholder="Город" name="city" required)
+
+                  button(type='submit' style='margin-bottom: 10px').button Отправить
+                     span.blick.light
+                  a(style="text-align:center; text-decoration: underline; font-size: 14px")(href="./docs/policy.docx" ) Политика конфиденциальности
+
+      div(class='modal' id="modal-poll")
+         .modal-content
+            span.close#closeModalBtn
+               svg.closesvg(width='26', height='26', viewBox='0 0 26 26', xmlns='http://www.w3.org/2000/svg')
+                  path(d='M19.5 6.5L6.5 19.5', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                  path(d='M6.5 6.5L19.5 19.5', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+
+            .form 
+               form(action="./php/mail-poll.php" method="POST")
+                  h3 ПРОЙДИТЕ КОРОТКИЙ ТЕСТ — ОПРОС
+                  h4 Позвоните и получите личную консультацию по запуску франшизы
+
+                  .inputs
+                     input(type="text" placeholder="Из какого вы города?" name="city" required)
+                     input(type="text" placeholder="Есть ли опыт управления БПЛА?" name="e_bpla" required)
+                     input(type="text" placeholder="У вас был опыт собственного бизнеса?" name="e_business" required)
+                     input(type="text" placeholder="Есть ли знакомые инструкторы БПЛА?" name="network" required)
+                     input(type="text" placeholder="Ваше имя" name="name" required)
+                     input(type="email" placeholder="Электронная почта" name="email" required)
+                     input(type="tel" placeholder="Телефон" name="phone" required)
+
+                  button(type='submit').button.green Отправить
+                     span.blick.light
+
+      //- .whats_app 
+      //-    a(href="https://wa.me/79776210686")
+      //-       img(src="./img/whatsapp.png", alt="whatsapp" height=90 width=150) 
+
+      //- script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
+
+
+
+      script(src="./js/burger.js")
+      script(src="./js/modal.js")
+      script(src="./js/masks/input.js")
+
+
+
+
+
+
+
+
+

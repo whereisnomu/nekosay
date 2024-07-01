@@ -1,0 +1,59 @@
+@keyframes rotate-rtl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes text-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes blick {
+  30% {
+    webkit-transform: skewX(-45deg) translateX(13.5em);
+    transform: skewX(-45deg) translateX(112.5em);
+  }
+
+  100% {
+    webkit-transform: skewX(-45deg) translateX(13.5em);
+    transform: skewX(-45deg) translateX(112.5em);
+  }
+}

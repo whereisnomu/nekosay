@@ -1,0 +1,209 @@
+@use "../variables.scss" as *;
+
+#benefits {
+  background: $bg;
+  padding: 100px 60px;
+
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: $lscreen) {
+    padding: 100px 40px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 60px 20px;
+
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 60px 10px;
+  }
+
+  .benefits__content {
+    text-align: left;
+    margin-bottom: 40px;
+    width: 100%;
+
+    @media (max-width: $notebooks) {
+      margin-bottom: 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .benefits__title {
+      color: $w;
+      font-size: 38px;
+      font-weight: 700;
+      max-width: 540px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      &--highlight {
+        color: $yellow;
+
+        @media (max-width: $lscreen) {
+          font-size: 26px;
+        }
+      }
+
+      @media (max-width: $sxga) {
+        font-size: 34px;
+        min-width: unset;
+      }
+
+      @media (max-width: $lscreen) {
+        font-size: 32px;
+      }
+
+      @media (max-width: $notebooks) {
+        text-align: center;
+        max-width: 350px;
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 28px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 22px;
+        text-align: left;
+
+        &--highlight {
+          color: $yellow;
+
+          font-size: 22px;
+        }
+      }
+    }
+
+    .benefits__subtitle {
+      color: $w;
+      opacity: 0.8;
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 20px;
+      max-width: 540px;
+
+      @media (max-width: $lscreen) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $notebooks) {
+        max-width: 350px;
+        text-align: center;
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 14px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+
+    .benefits__stats {
+      display: flex;
+      margin-bottom: 30px;
+
+      @media (max-width: $tablet) {
+        //   flex-direction: column;
+        align-items: center;
+      }
+
+      .benefits__stat {
+        color: rgba($w, 0.7);
+        font-size: 18px;
+        max-width: 215px;
+        font-weight: 500;
+        margin-right: 40px;
+
+        &.dro {
+          max-width: 130px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @media (max-width: $lscreen) {
+          font-size: 16px;
+        }
+
+        @media (max-width: $notebooks) {
+          margin-right: 0;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: 16px;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 14px;
+        }
+      }
+
+      .benefits__stat-number {
+        display: block;
+        font-size: 64px;
+        color: $w;
+        font-weight: 500;
+
+        @media (max-width: $lscreen) {
+          font-size: 56px;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .benefits__cta {
+      background: $yellow;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      color: $bg;
+    }
+  }
+
+  .benefits__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: $notebooks) {
+      justify-content: center;
+    }
+
+    .benefits__row {
+      gap: 20px;
+      display: flex;
+
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        gap: unset;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        .card:last-child {
+          margin-bottom: unset;
+        }
+      }
+    }
+  }
+}

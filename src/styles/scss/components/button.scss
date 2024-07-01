@@ -1,0 +1,68 @@
+@import "../variables.scss";
+
+.button {
+  position: relative;
+  overflow: hidden;
+  padding: 25px 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  color: $b;
+  z-index: 10;
+
+  font-family: "agg";
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  // box-shadow: 0px 4px 30px 0px #b7f446c8;
+
+  @media (max-width: $notebooks) {
+    font-size: 12px;
+  }
+
+  &.transparent {
+    border: 1px solid $blue;
+    background-color: transparent;
+
+    a {
+      color: $blue;
+    }
+  }
+
+  &.blue {
+    background-color: $blue;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.orange {
+    background-color: $orange;
+  }
+
+  .blick {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    -webkit-transform: skewX(45deg) translateX(0);
+    transform: skewX(45deg) translateX(0);
+    -webkit-transition: none;
+    transition: none;
+
+    &.light {
+      webkit-animation: blick 5s ease-in-out infinite;
+      -moz-animation: blick 5s ease-in-out infinite;
+      -ms-animation: blick 5s ease-in-out infinite;
+      -o-animation: blick 5s ease-in-out infinite;
+      animation: blick 5s ease-in-out infinite;
+    }
+  }
+}

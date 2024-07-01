@@ -1,0 +1,376 @@
+@import url("https://fonts.cdnfonts.com/css/tt-norms-pro");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap");
+
+@import "./modules/reset";
+
+@import "./variables";
+
+@import "./components";
+
+@import "./fonts";
+
+@import "./animation";
+
+@import "./mixins";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2,
+h3 {
+  font-family: "helvetica";
+}
+
+h2 {
+  font-weight: 500;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "helvetica", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  opacity: 1;
+  z-index: 99;
+
+  button {
+    outline: none;
+    border: none;
+    color: $w;
+    font-weight: 700;
+    font-family: "helvetica", sans-serif;
+
+    font-size: 18px;
+  }
+
+  textarea {
+    font-family: "helvetica", sans-serif;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    color: $dark;
+    font-weight: 400;
+    font-family: "helvetica", sans-serif;
+
+    font-size: 18px;
+  }
+
+  main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    text-decoration: none;
+    color: $w;
+    cursor: pointer;
+
+    &.link {
+      color: $orange;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .h2 {
+    font-size: 52px;
+    font-weight: 700;
+    font-family: "avanti";
+    color: #e0a8b8;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    span {
+      color: $green;
+    }
+
+    @media (max-width: $sxga) {
+      font-size: 52px;
+    }
+
+    @media (max-width: $lscreen) {
+      font-size: 42px;
+    }
+
+    @media (max-width: $notebooks) {
+      font-size: 36px;
+      max-width: 500px;
+    }
+
+    @media (max-width: $tablet) {
+      display: block;
+      font-size: 28px;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      display: block;
+      letter-spacing: 1px;
+
+      max-width: 380px;
+      text-align: center !important;
+    }
+  }
+
+  .h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: $w;
+
+    span {
+      color: $blue;
+    }
+
+    @media (max-width: $sxga) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $lscreen) {
+      font-size: 26px;
+    }
+
+    @media (max-width: $notebooks) {
+      font-size: 22px;
+      max-width: 380px;
+    }
+
+    @media (max-width: $tablet) {
+      display: block;
+      font-size: 18px;
+      max-width: 380px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      display: block;
+
+      text-align: left !important;
+    }
+  }
+
+  .h4 {
+    font-family: "helvetica", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: $w;
+    text-transform: uppercase;
+
+    @media (max-width: $notebooks) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+
+  .text {
+    .nav {
+      color: $grey;
+      border: 1px solid $grey;
+      border-radius: 40px;
+      padding: 10px 24px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .small {
+    max-width: 450px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $grey;
+    line-height: 26px;
+
+    @media (max-width: $sxga) {
+      font-size: 16px;
+      max-width: 395px;
+    }
+
+    @media (max-width: $notebooks) {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 348px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 13px;
+      line-height: 18px;
+      max-width: 348px;
+    }
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    z-index: 999;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: $textpink;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 30px 30px 40px 30px;
+    border-radius: 20px;
+    // border: 1px solid #888;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 450px;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .mob {
+      display: none;
+    }
+
+    .closesvg path {
+      fill: inherit;
+      stroke: $w;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+
+    .closesvg:hover path {
+      stroke: #ed1c24;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      form {
+        gap: unset;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          color: $w;
+          max-width: 380px;
+          margin-bottom: 10px;
+        }
+
+        h4 {
+          font-size: 15px;
+          color: $w;
+          margin-bottom: 30px;
+        }
+
+        .inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 20px;
+          color: $w;
+
+          input {
+            color: $w;
+            font-size: 15px;
+          }
+        }
+
+        .button {
+          // background-color: $w;
+          // color: $blue;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .whats_app {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1000;
+
+    @media (max-width: $tablet) {
+      right: 0px;
+
+      img {
+        width: 120px;
+        height: 70px;
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .modal.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.4s;
+  }
+}
+
+@import "./modules";

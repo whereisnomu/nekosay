@@ -1,0 +1,73 @@
+@import "../variables.scss";
+
+.card {
+  //   background-color: $pink;
+  padding: 24px;
+  border: 1px solid $pink;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+
+  border: 2px solid $w;
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+
+  .top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    span.card__num {
+      color: rgba($w, 0.7);
+      font-size: 16px;
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+
+      @media (max-width: $sxga) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $w;
+      margin: 0;
+      margin-bottom: 10px;
+
+      @media (max-width: $sxga) {
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: $lscreen) {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba($w, 0.7);
+
+      @media (max-width: $lscreen) {
+        font-size: 16px;
+      }
+    }
+  }
+}

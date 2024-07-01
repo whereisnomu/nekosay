@@ -1,0 +1,181 @@
+@use "../variables.scss" as *;
+
+#main {
+  background: $footerbg;
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $lscreen) {
+    padding: 10px 40px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .main__content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (max-width: $notebooks) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .main__unit {
+      @media (max-width: $notebooks) {
+        max-width: 370px;
+      }
+
+      @media (max-width: $mobile) {
+        text-align: left;
+        max-width: 300px;
+      }
+    }
+
+    .main__title {
+      color: $w;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+
+      &--highlight {
+        color: $pink;
+      }
+
+      @media (max-width: $lscreen) {
+        font-size: 32px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 26px;
+      }
+    }
+
+    .main__subtitle {
+      color: $w;
+      opacity: 0.8;
+      font-size: 20px;
+      margin-top: 10px;
+      max-width: 400px;
+      font-weight: 400;
+
+      @media (max-width: $lscreen) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 15px;
+        max-width: 290px;
+      }
+    }
+
+    .main__benefits {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+
+      .main__benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: $w;
+        font-size: 18px;
+
+        img {
+          margin-right: 10px;
+        }
+
+        @media (max-width: $lscreen) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .main__cta {
+      background: $yellow;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      max-width: 430px;
+      width: 100%;
+      color: $bg;
+
+      @media (max-width: $lscreen) {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      @media (max-width: $notebooks) {
+        max-width: unset;
+      }
+    }
+  }
+
+  .main__image {
+    position: relative;
+    z-index: 1;
+    bottom: -15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    right: -60px;
+
+    @media (max-width: $notebooks) {
+      right: 0;
+    }
+
+    .niko-full {
+      display: block;
+      width: 100%;
+    }
+
+    .niko-mobile {
+      display: none;
+      // width: 50%; /* Adjust as necessary */
+
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $notebooks) {
+      .niko-full {
+        display: none;
+      }
+
+      .niko-mobile {
+        display: block;
+      }
+    }
+
+    @media (max-width: $lscreen) {
+      img {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

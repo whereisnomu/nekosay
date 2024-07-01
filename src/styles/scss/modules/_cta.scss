@@ -1,0 +1,199 @@
+@use "../variables.scss" as *;
+
+.cta {
+  padding: 50px 0 50px 140px;
+
+  font-family: "avanti", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 240, 238);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 240, 238, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 240, 238, 1) 100%
+  );
+
+  @media (max-width: $lscreen) {
+    padding: 50px 0 50px 80px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 50px 40px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 50px 10px;
+  }
+
+  .container {
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: $notebooks) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @media (max-width: $mobile) {
+      gap: 20px;
+    }
+
+    .left {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: $notebooks) {
+        max-width: 100%;
+      }
+
+      .logo {
+        margin-bottom: 20px;
+
+        img {
+          margin-bottom: 80px;
+          max-width: 300px;
+
+          @media (max-width: $lscreen) {
+            max-width: 250px;
+            margin-bottom: 40px;
+          }
+
+          @media (max-width: $tablet) {
+            // width: 120px;
+          }
+        }
+      }
+
+      .cta-wrapper {
+        background-color: #e0a8b8;
+        padding: 50px 90px;
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+
+        @media (max-width: $lscreen) {
+          padding: 50px;
+        }
+
+        @media (max-width: $mobile) {
+          padding: 30px;
+        }
+      }
+
+      .cta-text {
+        font-size: 26px;
+        font-weight: 400;
+        font-family: "avanti";
+        color: $w;
+        margin-bottom: 80px;
+
+        @media (max-width: $lscreen) {
+          font-size: 20px !important;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: 22px !important;
+        }
+
+        p {
+          font-size: 24px;
+          line-height: 1.5;
+          font-weight: 700;
+          color: $w;
+
+          @media (max-width: $lscreen) {
+            font-size: 20px !important;
+          }
+
+          @media (max-width: $tablet) {
+            font-size: 22px !important;
+          }
+        }
+      }
+
+      .button {
+        color: $textpink;
+        background: $w;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        padding: 30px 50px;
+        cursor: pointer;
+
+        @media (max-width: $lscreen) {
+          padding: 30px;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: 16px;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 14px;
+          padding: 20px 30px;
+        }
+      }
+    }
+
+    .right {
+      max-width: 50%;
+
+      @media (max-width: $notebooks) {
+        max-width: unset;
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgb(255, 240, 238);
+          background: linear-gradient(
+            180deg,
+            #fff0ee 0,
+            #fff0 30%,
+            #fff0ee 100%
+          );
+          z-index: 1;
+          border-radius: 10px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          object-fit: cover;
+          position: relative;
+          z-index: 0;
+
+          @media (max-width: $mobile) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

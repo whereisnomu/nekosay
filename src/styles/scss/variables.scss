@@ -1,0 +1,49 @@
+// Media-Queries
+$mobile: 480px;
+$tablet: 768px;
+$notebooks: 1024px;
+$lscreen: 1200px;
+$sxga: 1300px;
+$xlscreen: 1920px;
+
+//Text colors
+$green: #b8f446;
+$dark: #282828;
+$grey: #575756;
+$orange: #ff6c29;
+$placeholder: #ffffff;
+$red: #ec1c26;
+$b: #000;
+$textpink: #cf5d80;
+
+$w: #fff;
+$blue: #82cee9;
+$pink: #e6388d;
+$yellow: #f6e774;
+$bg: #3c3052;
+
+//Borders colors
+$bordergrey: #e1e1e1;
+$bordergreen: #b0cb1f;
+$bordercard: #ceccbf;
+
+//Background colors
+$headerbg: #3c3052;
+$whitepink: #fff0ee;
+$whitegreen: #faf8eb;
+$backgroundgreen: #f2f5d5;
+$greenbox: rgba(176, 203, 31, 0.08);
+$background: #f4f5f7;
+$firstground: #eff4fa;
+$backlightblue: #ddeef9;
+
+$footerbg: #1a112b;
+$footergrey: #656565;
+$footerbgicons: #394057;
+
+//Utils
+$text-shadow: -0 -1px 0 #000000, 0 -1px 0 #000000, -0 1px 0 #000000,
+  0 1px 0 #000000, -1px -0 0 #000000, 1px -0 0 #000000, -1px 0 0 #000000,
+  1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+  1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+  1px 1px 0 #000000;

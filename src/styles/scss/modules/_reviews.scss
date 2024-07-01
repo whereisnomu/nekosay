@@ -1,0 +1,94 @@
+@use "../variables.scss" as *;
+
+.reviews {
+  padding: 50px 140px;
+  background-color: $whitepink;
+  font-family: "avanti", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: $lscreen) {
+    padding: 50px 80px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 50px 40px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 50px 10px;
+  }
+
+  .container {
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reviews__header {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+
+    .title {
+      color: $textpink;
+      font-size: 38px;
+      font-weight: bold;
+
+      max-width: 620px;
+      text-align: right;
+
+      @media (max-width: $lscreen) {
+        font-size: 32px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 26px;
+      }
+    }
+
+    span {
+      font-size: 200px;
+      font-family: "avanti";
+      color: $textpink;
+      font-weight: 700;
+      opacity: 0.4;
+
+      width: 100px; /* Задаем ширину */
+      height: 185px; /* Задаем высоту */
+      display: block; /* Делаем элемент блочным */
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Количество строк для отображения */
+      -webkit-box-orient: vertical;
+      line-clamp: 3; /* Количество строк для отображения */
+      box-orient: vertical;
+
+      @media (max-width: $mobile) {
+        font-size: 110px;
+        width: 80px;
+        height: 105px;
+      }
+    }
+  }
+
+  .reviews__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+  }
+}
