@@ -1,15 +1,15 @@
-section#cta.cta
-  .container
-    .left
-      .logo
-        img(src="./img/cta/logo.svg" alt="KosmKurs" width=300 height=250)
-      .cta-wrapper 
-        .cta-text
-          p Оставьте свои контактные данные,
-          | и мы свяжемся с вами
-          br
-          | в ближайшее время
-        button.button.open-modal ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-    .right
-      .image-container
-        img(src="./img/cta/author.jpg" alt="Галина Николаевна Романова")
+section#contact
+  .contact__content
+    .contact__form
+      h2.contact__title ХОТИТЕ, ЧТОБЫ ВАШИ ДЕНЬГИ РАБОТАЛИ?
+        span Узнайте подробнее о сотрудничестве с сетью аниме-магазинов Nekosay и станьте частью успешной франчайзинговой сети уже сегодня!
+      form(action="./php/mail.php" method="POST")
+        input(type="text" placeholder="Ваше имя" name="name" required)
+        input(type="tel" placeholder="+7 (___) ___-__-__" id="phone" name="phone" required)
+        input(type="email" placeholder="Электронная почта" name="email" required)
+        input(type="text" placeholder="Город" name="city" required)
+        button(type='submit').button Оставить заявку на франшизу
+        a(href="./docs/policy.docx" style="text-align:center; font-size: 14px") Я даю согласие на 
+          span(style="text-align:center; text-decoration: underline; font-size: 14px") обработку персональных данных
+    .contact__image
+      img(src="./img/cta/1.jpg" alt="Nekosay Store")

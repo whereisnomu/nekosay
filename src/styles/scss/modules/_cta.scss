@@ -1,199 +1,168 @@
 @use "../variables.scss" as *;
 
-.cta {
-  padding: 50px 0 50px 140px;
-
-  font-family: "avanti", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(255, 240, 238);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 240, 238, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 240, 238, 1) 100%
-  );
+#contact {
+  background: $bg;
+  padding: 0 60px 100px;
 
   @media (max-width: $lscreen) {
-    padding: 50px 0 50px 80px;
+    padding: 0 40px 100px;
   }
 
   @media (max-width: $notebooks) {
-    padding: 50px 40px;
+    padding: 0 20px 60px;
   }
 
   @media (max-width: $mobile) {
-    padding: 50px 10px;
+    padding: 0 10px 60px;
   }
 
-  .container {
-    max-width: 1366px;
-    margin: 0 auto;
+  .contact__content {
     display: flex;
-    width: 100%;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch; // This will make the items stretch to the same height
+    gap: 40px;
 
-    @media (max-width: $notebooks) {
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    @media (max-width: $mobile) {
+    @media (max-width: $lscreen) {
       gap: 20px;
     }
 
-    .left {
-      max-width: 50%;
-      display: flex;
+    @media (max-width: $notebooks) {
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+    }
+  }
 
-      @media (max-width: $notebooks) {
-        max-width: 100%;
-      }
+  .contact__form {
+    max-width: 540px;
+    flex-shrink: 0;
+    padding: 40px;
+    border: 2px solid $w;
+    background: $bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // This will vertically center the form
 
-      .logo {
-        margin-bottom: 20px;
+    @media (max-width: $lscreen) {
+      padding: 30px;
+      max-width: 450px;
+    }
 
-        img {
-          margin-bottom: 80px;
-          max-width: 300px;
+    @media (max-width: $notebooks) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
 
-          @media (max-width: $lscreen) {
-            max-width: 250px;
-            margin-bottom: 40px;
-          }
+    @media (max-width: $tablet) {
+      padding: 20px;
+    }
 
-          @media (max-width: $tablet) {
-            // width: 120px;
-          }
-        }
-      }
+    .contact__title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: $w;
+      max-width: 460px;
 
-      .cta-wrapper {
-        background-color: #e0a8b8;
-        padding: 50px 90px;
-        border-top-left-radius: 80px;
-        border-bottom-right-radius: 80px;
-
-        @media (max-width: $lscreen) {
-          padding: 50px;
-        }
-
-        @media (max-width: $mobile) {
-          padding: 30px;
-        }
-      }
-
-      .cta-text {
-        font-size: 26px;
+      span {
+        display: block;
+        font-size: 16px;
+        color: rgba($w, 0.8);
+        margin-top: 10px;
         font-weight: 400;
-        font-family: "avanti";
-        color: $w;
-        margin-bottom: 80px;
+        line-height: 140%;
+        margin-bottom: 30px;
+      }
 
-        @media (max-width: $lscreen) {
-          font-size: 20px !important;
-        }
-
-        @media (max-width: $tablet) {
-          font-size: 22px !important;
-        }
-
-        p {
-          font-size: 24px;
-          line-height: 1.5;
-          font-weight: 700;
-          color: $w;
-
-          @media (max-width: $lscreen) {
-            font-size: 20px !important;
-          }
-
-          @media (max-width: $tablet) {
-            font-size: 22px !important;
-          }
+      @media (max-width: $lscreen) {
+        span {
+          font-size: 16px;
         }
       }
 
-      .button {
-        color: $textpink;
-        background: $w;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        border-radius: 50px;
-        padding: 30px 50px;
-        cursor: pointer;
+      @media (max-width: $tablet) {
+        text-align: left;
 
-        @media (max-width: $lscreen) {
-          padding: 30px;
+        font-size: 26px;
+
+        span {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: unset;
+
+      input {
+        padding: 15px;
+        border: 1px solid rgba($w, 0.3);
+        background: none;
+        color: $w;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-radius: unset;
+        width: 100%;
+
+        &::placeholder {
+          color: rgba($w, $alpha: 0.8);
         }
 
-        @media (max-width: $tablet) {
-          font-size: 16px;
+        &[name="city"] {
+          margin-bottom: 20px;
         }
 
         @media (max-width: $mobile) {
           font-size: 14px;
-          padding: 20px 30px;
+          padding: 12px;
+        }
+      }
+
+      .button {
+        background-color: $yellow;
+        color: $bg;
+        padding: 20px;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 20px;
+        max-width: unset;
+        border-radius: unset;
+        text-transform: unset;
+
+        @media (max-width: $mobile) {
+          padding: 12px;
         }
       }
     }
 
-    .right {
-      max-width: 50%;
+    a {
+      display: block;
+      color: rgba($w, 0.8);
+      text-align: center;
+      font-size: 14px;
+    }
+  }
 
-      @media (max-width: $notebooks) {
-        max-width: unset;
-      }
+  .contact__image {
+    flex: 1; // This will make the image take the remaining space
+    display: flex;
+    align-items: center; // This will vertically center the image
 
-      @media (max-width: $tablet) {
-        max-width: 100%;
-        margin-top: 20px;
-      }
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      text-align: center;
+      flex: unset; // Reset flex property for mobile
+    }
 
-      .image-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgb(255, 240, 238);
-          background: linear-gradient(
-            180deg,
-            #fff0ee 0,
-            #fff0 30%,
-            #fff0ee 100%
-          );
-          z-index: 1;
-          border-radius: 10px;
-        }
-
-        img {
-          width: 100%;
-          height: auto;
-          border-radius: 10px;
-          object-fit: cover;
-          position: relative;
-          z-index: 0;
-
-          @media (max-width: $mobile) {
-            display: none;
-          }
-        }
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Ensure the image covers the container without stretching
+      border-left: 2px solid $w;
+      border-right: 2px solid $w;
     }
   }
 }

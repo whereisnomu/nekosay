@@ -238,17 +238,22 @@ body {
 
   .modal-content {
     position: relative;
-    background-color: $textpink;
+    background: linear-gradient(rgba($w, 0.06), rgba($w, 0.06)), $bg; // синий цвет фона
+    // background-color: rgba($bg, 1);
     margin: 0 auto;
     margin-top: 100px;
     padding: 30px 30px 40px 30px;
-    border-radius: 20px;
-    // border: 1px solid #888;
+    // border-radius: 20px;
+    border: 2px solid $w;
     box-sizing: border-box;
     width: 100%;
     max-width: 450px;
     animation-name: slideIn;
     animation-duration: 0.4s;
+
+    @media (max-width: $mobile) {
+      padding: 30px 10px 40px;
+    }
 
     .close {
       color: #aaa;
@@ -286,17 +291,25 @@ body {
         gap: unset;
 
         h3 {
-          font-size: 20px;
-          font-weight: 500;
+          font-size: 30px;
+          font-weight: 700;
           color: $w;
           max-width: 380px;
           margin-bottom: 10px;
+
+          @media (max-width: $mobile) {
+            font-size: 26px;
+          }
         }
 
         h4 {
-          font-size: 15px;
-          color: $w;
+          font-size: 18px;
+          color: rgba($w, 0.8);
           margin-bottom: 30px;
+
+          @media (max-width: $mobile) {
+            font-size: 16px;
+          }
         }
 
         .inputs {
@@ -309,14 +322,23 @@ body {
           input {
             color: $w;
             font-size: 15px;
+            border-radius: unset;
           }
         }
 
         .button {
           // background-color: $w;
           // color: $blue;
+          border-radius: unset;
+          background-color: $yellow;
           font-size: 15px;
           font-weight: 500;
+          padding: 20px;
+          margin-bottom: 20px;
+
+          @media (max-width: $mobile) {
+            padding: 12px;
+          }
         }
       }
     }
