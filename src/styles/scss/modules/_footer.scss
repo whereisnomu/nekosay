@@ -1,93 +1,230 @@
 @use "../variables.scss" as *;
 
-.reviews {
-  padding: 50px 140px;
-  background-color: $whitepink;
-  font-family: "avanti", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#footer {
+  background: $footerbg;
+  padding: 100px 60px 40px;
 
   @media (max-width: $lscreen) {
-    padding: 50px 80px;
+    padding: 60px 40px 40px;
   }
 
   @media (max-width: $notebooks) {
-    padding: 50px 40px;
+    padding: 40px 20px 40px;
   }
 
   @media (max-width: $mobile) {
-    padding: 50px 10px;
+    padding: 40px 10px 40px;
   }
 
-  .container {
-    max-width: 1366px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  .footer__content {
+    .footer__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
 
-  .reviews__header {
-    margin-bottom: 50px;
-    display: flex;
-    align-items: flex-end;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    .title {
-      color: $textpink;
-      font-size: 38px;
-      font-weight: bold;
+        // align-items: flex-start;
+      }
 
-      max-width: 620px;
-      text-align: right;
+      .footer__left {
+        display: flex;
+        align-items: flex-start;
 
-      @media (max-width: $lscreen) {
+        flex-direction: column;
+
+        @media (max-width: $tablet) {
+          align-items: center;
+        }
+
+        @media (max-width: $mobile) {
+          text-align: center;
+        }
+
+        img {
+          max-width: 220px;
+          margin-bottom: 14px;
+
+          @media (max-width: $tablet) {
+            max-width: unset;
+          }
+
+          @media (max-width: $mobile) {
+            margin-bottom: 10px;
+          }
+        }
+
+        .footer__description {
+          color: rgba($w, 0.7);
+          font-size: 16px;
+
+          @media (max-width: $notebooks) {
+            max-width: 250px;
+          }
+
+          @media (max-width: $tablet) {
+            max-width: unset;
+            margin-bottom: 20px;
+            max-width: 180px;
+          }
+        }
+      }
+
+      .footer__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-weight: 500;
+        color: $w;
         font-size: 32px;
+
+        @media (max-width: $notebooks) {
+          font-size: 26px;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: 22px;
+        }
       }
 
-      @media (max-width: $mobile) {
-        font-size: 26px;
+      .footer__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media (max-width: $tablet) {
+          align-items: flex-start;
+          margin-top: 20px;
+        }
+
+        a {
+          color: $w;
+          text-decoration: none;
+          font-size: 16px;
+          margin-bottom: 5px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .footer__social {
+          display: flex;
+
+          @media (max-width: $tablet) {
+            display: flex;
+            align-items: baseline;
+
+            a {
+              margin: unset;
+              &:nth-child(2) {
+                margin-bottom: 10px;
+              }
+
+              &:last-child {
+                margin-bottom: 20px;
+              }
+            }
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            margin-left: 10px;
+
+            @media (max-width: $notebooks) {
+              width: 48px;
+              height: 48px;
+            }
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            img {
+              width: 60px;
+              height: 60px;
+              @media (max-width: $notebooks) {
+                width: 48px;
+                height: 48px;
+              }
+            }
+          }
+        }
       }
     }
 
-    span {
-      font-size: 200px;
-      font-family: "avanti";
-      color: $textpink;
-      font-weight: 700;
-      opacity: 0.4;
+    .footer__nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba($w, 0.3);
+      border-bottom: 1px solid rgba($w, 0.3);
 
-      width: 100px; /* Задаем ширину */
-      height: 185px; /* Задаем высоту */
-      display: block; /* Делаем элемент блочным */
-      display: -webkit-box;
-      -webkit-line-clamp: 3; /* Количество строк для отображения */
-      -webkit-box-orient: vertical;
-      line-clamp: 3; /* Количество строк для отображения */
-      box-orient: vertical;
+      @media (max-width: $tablet) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
 
-      @media (max-width: $mobile) {
-        font-size: 110px;
-        width: 80px;
-        height: 105px;
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          color: $w;
+          text-decoration: none;
+          font-size: 16px;
+          margin-right: 20px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @media (max-width: $tablet) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+        }
       }
     }
-  }
 
-  .reviews__content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
+    .footer__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
 
       @media (max-width: $mobile) {
-        width: 100%;
+        flex-direction: column;
+        // align-items: flex-start;
+      }
+
+      p {
+        color: rgba($w, 0.7);
+        font-size: 16px;
+      }
+
+      a {
+        color: rgba($w, 0.7);
+
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
