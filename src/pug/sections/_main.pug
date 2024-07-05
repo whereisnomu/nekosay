@@ -8,15 +8,17 @@ section#main
     .main__unit 
       ul.main__benefits
         li.main__benefit
-          img(src="./img/main/mark.svg", alt="Mark Icon")
+          img(data-src="./img/main/mark.svg", alt="Mark Icon").lazy
           | Рентабельность от 20%
         li.main__benefit
-          img(src="./img/main/mark.svg", alt="Mark Icon")
+          img(data-src="./img/main/mark.svg", alt="Mark Icon").lazy
           | Ассортимент 10 000+ позиций
         li.main__benefit
-          img(src="./img/main/mark.svg", alt="Mark Icon")
+          img(data-src="./img/main/mark.svg", alt="Mark Icon").lazy
           | Прямые поставки от лучших производителей
       button.main__cta Стать франчайзи NekoSay
   .main__image
-    img(src="./img/main/full.png", alt="Niko", class="niko-full")
-    img(src="./img/main/mobile.png", alt="Niko Mobile", class="niko-mobile")
+    img(data-src="./img/main/full.png",  alt="Niko", class="niko-full" ).lazy
+    img(data-src="./img/main/mobile.png",  alt="Niko Mobile", class="niko-mobile" ).lazy
+  
+

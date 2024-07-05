@@ -200,8 +200,8 @@
       }
 
       &:last-child {
+        margin-bottom: unset;
         .card:last-child {
-          margin-bottom: unset;
         }
       }
     }

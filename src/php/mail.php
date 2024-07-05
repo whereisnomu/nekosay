@@ -38,7 +38,7 @@ $email = $_POST['email'];
 $city = $_POST['city'];
 
 $mail->setFrom('ru.no-reply@mail.ru', 'tf-no-reply-bot');
-$mail->addAddress('kosmkurs@yandex.ru', 'kosmkurs');
+$mail->addAddress('franchise@nekosay.ru', 'nekosay');
 // $mail->AddCC('multidevelop.java@gmail.com', 'Arthur Chagirov');
 // $mail->AddCC('rezultat_logoped@mail.ru', 'Logoped Rezultat');
 
@@ -187,7 +187,7 @@ bgcolor="#ffffff"
                           padding: 0;
                         "
                       >
-                        На лендинге <a href="fr-kk.ru">fr-kk.ru</a> Вам была оставлена заявка
+                        На лендинге <a href="fr-nekosay.ru">fr-nekosay.ru</a> Вам была оставлена заявка
                         <br />
                         Контакты заинтересованного лица: &nbsp; <br />
                       </p>
@@ -213,8 +213,8 @@ bgcolor="#ffffff"
                       >
                         Интересует:
                         <a
-                          href="https://topfranchise.ru/products/franshiza-obuchayushchikh-tsentrov-mezhregionalnyy-tsentr-kosmetologii-i-parikmakherskogo-iskusstva/"
-                          >"Франшиза «Межрегиональный центр косметологии и парикмахерского искусства» — это 25 лет опыта, 1000+ обученных специалистов и 5 актуальных направлений в бьюти-сфере."
+                          href="https://topfranchise.ru/products/franshiza-seti-anime-magazinov-nekosay/"
+                          >"Франшиза сети аниме-магазинов NEKOSAY"
                         </a>
                       </p>
                       <p

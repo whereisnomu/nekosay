@@ -1,18 +1,18 @@
 header#header
     .header__logo
-      img(src="./img/header/logo.svg", alt="Logo")
+      img(data-src="./img/header/logo.png", alt="Logo").lazy
     nav.header__nav
       ul.header__menu
         li.header__item
-          a(href="#") О нас
+          a(href="#benefits") О нас
         li.header__item
-          a(href="#") Магазины
+          a(href="#location") Магазины
         li.header__item
-          a(href="#") Преимущества
+          a(href="#franchise") Преимущества
         li.header__item
-          a(href="#") Форматы
+          a(href="#formats") Форматы
         li.header__item
-          a(href="#") Контакты
+          a(href="#contact") Контакты
     .header__contact
       span.header__phone +7 (952) 478-02-84
       span.header__desc Звоните, проконсультируем
@@ -21,25 +21,25 @@ header#header
     .unit
       .header__icon 
         a(href="tel:+79524780284") 
-          img(src="./img/header/phone.svg", alt="Phone Icon")
+          img(data-src="./img/header/phone.svg", alt="Phone Icon").lazy
       .header__burger
-        img(src="./img/header/burger.svg", alt="Menu")
+        img(data-src="./img/header/burger.svg", alt="Menu").lazy
 
     // Burger Menu for Mobile
     .header__mobile-menu
       .header__mobile-close
-        img(src="./img/header/close.svg", alt="Close")
+        img(data-src="./img/header/close.svg", alt="Close").lazy
       ul.header__mobile-menu-list
         li.header__mobile-item
-          a(href="#") О нас
+          a(href="#benefits") О нас
         li.header__mobile-item
-          a(href="#") Магазины
+          a(href="#location") Магазины
         li.header__mobile-item
-          a(href="#") Преимущества
+          a(href="#franchise") Преимущества
         li.header__mobile-item
-          a(href="#") Форматы
+          a(href="#formats") Форматы
         li.header__mobile-item
-          a(href="#") Контакты
+          a(href="#contact") Контакты
       .unit__mobile
         .header__mobile-contact
           span.header__mobile-phone +7 (952) 478-02-84

@@ -20,6 +20,8 @@ import csso from "gulp-csso";
 import imagemin, { optipng, mozjpeg } from "gulp-imagemin";
 import webp from "gulp-webp";
 
+import replace from "gulp-replace";
+
 const sass = gulpSass(dartSass);
 browserSync.create();
 
@@ -46,6 +48,7 @@ gulp.task("pug", function (callback) {
 gulp.task("sass", function (callback) {
   return gulp
     .src("./src/styles/scss/**/*.scss")
+    .pipe(replace(/@i\s+(.*?);/g, "@include $1;"))
     .pipe(
       plumber({
         errorHandler: notify.onError(function (err) {

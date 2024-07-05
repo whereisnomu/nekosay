@@ -10,6 +10,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   @media (max-width: $lscreen) {
     padding: 10px 40px;
