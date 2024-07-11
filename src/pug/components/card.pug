@@ -1,5 +1,5 @@
-mixin card(num = '01', title = 'Собственное производство', description = 'Ассортиментная политика — трендовые новинки и исторически популярные позиции', img ='./img/benefits/1.svg', color='red')
-  .card(style='background-color: ' + color +'')
+mixin card(num = '01', title = 'Собственное производство', description = 'Ассортиментная политика — трендовые новинки и исторически популярные позиции', img ='./img/benefits/1.svg', color='red', classElement='')
+  .card(class=classElement style='background-color: ' + color +'')
       .top
         span.card__num #{num}
         img(src=img, alt="" + title width=70 height=70)

@@ -446,5 +446,5 @@ $mail->msgHTML($message);
 
 $mail->send();
 
-header("Location: ../success.html")
+header("Location: ./success.html")
 ?>

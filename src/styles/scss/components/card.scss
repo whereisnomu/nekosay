@@ -17,6 +17,10 @@
   flex-direction: column-reverse;
   justify-content: space-between;
 
+  &.pointer {
+    cursor: pointer;
+  }
+
   .top {
     display: flex;
     align-items: flex-end;

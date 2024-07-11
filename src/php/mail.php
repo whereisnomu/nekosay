@@ -352,7 +352,7 @@ if (!$mail->send()) {
   exit;
 } else {
   // Перенаправляем на страницу успеха только если письмо успешно отправлено
-  header("Location: ../success.html");
+  header("Location: ./success.html");
   exit;
 }
 ?>
